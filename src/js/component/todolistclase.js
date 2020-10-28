@@ -24,7 +24,7 @@ export const TodoList = props => {
 	};
 
 	useEffect(() => {
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/Lorella", {
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/Alexander", {
 			method: "GET"
 		})
 			.then(resp => {
