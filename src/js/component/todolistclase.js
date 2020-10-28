@@ -46,13 +46,16 @@ export const TodoList = props => {
 
 	useEffect(
 		() => {
-			fetch("https://assets.breatheco.de/apis/fake/todos/user/Lorella", {
-				method: "PUT",
-				body: JSON.stringify(tasks),
-				headers: {
-					"Content-Type": "application/json"
+			fetch(
+				"https://assets.breatheco.de/apis/fake/todos/user/Alexander",
+				{
+					method: "PUT",
+					body: JSON.stringify(tasks),
+					headers: {
+						"Content-Type": "application/json"
+					}
 				}
-			})
+			)
 				.then(resp => {
 					if (!resp.ok) {
 						throw Error(resp.statusText);
