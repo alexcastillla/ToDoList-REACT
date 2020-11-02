@@ -11,3 +11,58 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+
+}
+.container{
+    margin-top: 80px;
+	width:380px;
+	// margin: 100px auto;
+}
+    
+
+h1{
+	background: #2980b9;
+	color: #ffffff;
+	margin: 0;
+	font-weight: bold;
+}
+.footer{
+    background: #4da1d8;
+	color: #ffffff;
+	margin: 0;
+	font-weight: bold;
+
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    list-style-type: none;
+}
+
+li{
+	background: #ffffff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+input{
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	color: #2980b9;
+	border-width:0px;
+	border:none;
+}
+.remove{
+    background: none;
+    border: none;
+}

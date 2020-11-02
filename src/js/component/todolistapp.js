@@ -3,11 +3,13 @@ import React, { Fragment, useState, useEffect } from "react";
 export const TodoList = props => {
 	const [tasks, setTasks] = useState([]);
 	const [initialValue, setInitialValue] = useState(null);
+	const [counter, setCounter] = useState(tasks.length + 1);
 
 	const removeTodo = index => {
 		const newTodos = [...tasks];
 		newTodos.splice(index, 1);
 		setTasks(newTodos);
+		setCounter(counter - 1);
 	};
 
 	let newTask = event => {
@@ -19,6 +21,7 @@ export const TodoList = props => {
 			if (newTask) {
 				setTasks(tasks => [...tasks, { label: newTask, done: false }]);
 				myInput.value = "";
+				setCounter(counter + 1);
 			}
 		}
 	};
@@ -60,13 +63,12 @@ export const TodoList = props => {
 					if (!resp.ok) {
 						throw Error(resp.statusText);
 					}
-					return resp.json(); // (regresa una promesa) will try to parse the result as json as return a promise that you can .then for results
+					return resp.json();
 				})
 				.then(respAsJson => {
 					return respAsJson.json();
 				})
 				.catch(error => {
-					//manejo de errores
 					console.log(error);
 				});
 		},
@@ -74,7 +76,7 @@ export const TodoList = props => {
 	);
 
 	return (
-		<Fragment>
+		<Fragment classname="containerTodo">
 			<form>
 				<input
 					id="taskInput"
@@ -87,15 +89,22 @@ export const TodoList = props => {
 					removeTodo={removeTodo}
 				/>
 			</form>
-			<div>
+			<ul>
 				{tasks.map((task, index) => {
 					return (
 						<li key={index}>
 							{task.label}
-							<button onClick={() => removeTodo(index)}>x</button>
+							<button
+								className="remove"
+								onClick={() => removeTodo(index)}>
+								✔
+							</button>
 						</li>
 					);
 				})}
+			</ul>
+			<div className="footer">
+				<p>Pending: {counter}</p>
 			</div>
 		</Fragment>
 	);
