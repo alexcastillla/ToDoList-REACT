@@ -73,40 +73,6 @@ export const TodoList = props => {
 		[tasks]
 	);
 
-	// useEffect(
-	// 	() => {
-	// 		fetch("https://assets.breatheco.de/apis/fake/todos/user/Lorella", {
-	// 			method: "PUT",
-	// 			body: JSON.stringify(tasks),
-	// 			headers: {
-	// 				"Content-Type": "application/json"
-	// 			}
-	// 		})
-	// .then(resp => {
-	// 	console.log(resp.ok); // Será true (verdad) si la respuesta es exitosa.
-	// 	console.log(resp.status); // el código de estado = 200 o código = 400 etc.
-	// 	console.log(resp.text()); // Intentará devolver el resultado exacto como cadena (string)
-	// 	return resp.json(); // (regresa una promesa) will try to parse the result as json as return a promise that you can .then for results
-	// 			})
-	// 			.then(respjson => {
-	// 				console.log(respjson); //esto imprimirá en la consola el objeto exacto recibido del servidor
-	// 				return respjson.json();
-	// 				//Aquí es donde debe comenzar tu código después de que finalice la búsqueda
-	// 			})
-	// 			.catch(error => {
-	// 				//manejo de errores
-	// 				console.log(error);
-	// 			});
-	// 	},
-	// 	[tasks]
-	// );
-
-	//Useffect que haga un fectch de la lista al cargarr dependiendo de un []
-
-	// UseEffect que se va a dedicar a añadir un elemento nuevo mi lista y dependera de la acción newTask. Siempre vamos a añadir toda la lista
-	// van en el mismo
-	// Segundo UseEffect que va a "eliminar" (en este caso es otra actualizacion) a mi lista, previa comprobacion de la lista almacenada. Esta dependera de removeTodo.
-
 	return (
 		<Fragment>
 			<form>
