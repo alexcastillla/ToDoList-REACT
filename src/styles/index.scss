@@ -17,22 +17,23 @@ background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
 }
 .container{
     margin-top: 80px;
-	width:380px;
+	width:360px;
 	// margin: 100px auto;
-}
-    
+}   
 
 h1{
 	background: #2980b9;
 	color: #ffffff;
 	margin: 0;
 	font-weight: bold;
+    border-radius: 5px 5px 0 0; 
 }
 .footer{
     background: #4da1d8;
 	color: #ffffff;
 	margin: 0;
 	font-weight: bold;
+    border-radius: 0 0 5px 5px;
 
 }
 
